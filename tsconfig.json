@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2015", // 'es3', 'es5', 'es2015', 'es2016', 'es2017','es2018', 'esnext' 가능
+    "module": "commonjs", //무슨 import 문법 쓸건지 'commonjs', 'amd', 'es2015', 'esnext'
+    "declaration": true, //컴파일시 .d.ts 파일도 자동으로 함께생성 (현재쓰는 모든 타입이 정의된 파일)
+    "outDir": "./dist", //js파일 아웃풋 경로
+    "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+    "pretty": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["*"],
+      "@src/*": ["src/*"],
+      "@configs/*": ["src/configs/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@models/*": ["src/models/*"],
+      "@plugins/*": ["src/plugins/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", "src/**/*.ejs", ".env"],
+  "exclude": ["node_modules", "test/local"]
+}
